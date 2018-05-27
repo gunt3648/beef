@@ -10,45 +10,47 @@
   <title>Register</title>
 </head>
 <body>
-  <div class="header">
-    <h2>Register</h2>
-  </div>
-  <form method="post" action="register_trav.php">
+  <div class="container">
+    <div class="row">
+  <form method="post" action="register_trav.php"  class="col-8 align-items-center mt-2">
     <?php include('errors.php'); ?>
-    <div class="input-group">
-      <label>Username</label>
-      <input type="text" name="username" value="<?php echo $username; ?>" minlength="5">
+    <h2>Register</h2>
+    <div class="input-group mb-3">
+      <label class="col-sm-3">Username</label>
+      <input type="text" name="username" value="<?php echo $username; ?>" minlength="5" class="col-sm-8">
     </div>
-    <div class="input-group">
-        <label>Email</label>
-        <input type="email" name="email" value="<?php echo $email; ?>">
+    <div class="input-group mb-3">
+        <label class="col-sm-3">Email</label>
+        <input type="email" name="email" value="<?php echo $email; ?>" class="col-sm-8">
     </div>
-    <div class="input-group">
-        <label>Password</label>
-        <input type="password" name="password" minlength="8">
+    <div class="input-group mb-3">
+        <label class="col-sm-3">Password</label>
+        <input type="password" name="password" minlength="8" class="col-sm-8">
     </div>
-    <div class="input-group">
-        <label>Confirm Password</label>
-        <input type="password" name="password_confirmed">
+    <div class="input-group mb-3">
+        <label class="col-sm-3">Confirm Password</label>
+        <input type="password" name="password_confirmed" class="col-sm-8">
     </div>
-    <div class="input-group">
-        <label>First Name</label>
-        <input type="text" name="first_name" value="<?php echo $first_name; ?>">
+    <div class="input-group mb-3">
+        <label class="col-sm-3">First Name</label>
+        <input type="text" name="first_name" value="<?php echo $first_name; ?>" class="col-sm-8">
     </div>
-    <div class="input-group">
-        <label>Last Name</label>
-        <input type="text" name="last_name" value="<?php echo $last_name; ?>">
+    <div class="input-group mb-3">
+        <label class="col-sm-3">Last Name</label>
+        <input type="text" name="last_name" value="<?php echo $last_name; ?>" class="col-sm-8">
     </div>
-    <div class="input-group">
-        <label>Tel.</label>
-        <input type="text" name="tel" value="<?php echo $tel; ?>">
+    <div class="input-group mb-3">
+        <label class="col-sm-3">Tel.</label>
+        <input type="text" name="tel" value="<?php echo $tel; ?>" class="col-sm-8">
     </div>
-    <div class="input-group">
+    <div class="input-group mb-3">
         <button type="submit" name="register_trav" class="btn">Register</button>
     </div>
     <p>
       Already a member?<a href="login.php">Sign in</a>
     </p>
   </form>
+</div>
+</div>
 </body>
 </html>
