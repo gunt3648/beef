@@ -10,7 +10,7 @@
         integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
         crossorigin="anonymous">
       <link rel="stylesheet" type="text/css" href="css/style.css">
-      <title>Register</title>
+      <title>BEEF | Register</title>
     </head>
     <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light container">
