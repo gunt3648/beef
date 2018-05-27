@@ -94,7 +94,7 @@
     if(count($errors2) == 0) {
       $password = md5($password); //security
       $sql = "INSERT INTO user (type, username, password, first_name, last_name, email, tel)
-        VALUES ('2', '$username', $password, $first_name, $last_name, '$email', $tel)";
+        VALUES ('2', '$username', '$password', '$first_name', '$last_name', '$email', '$tel')";
       mysqli_query($db, $sql);
       $_SESSION['username'] = $username;
   	  $_SESSION['success'] = "You are now logged in";
@@ -116,7 +116,7 @@
 
     if (count($errors) == 0) {
       $password = md5($password);
-      $query = "SELECT * FROM users WHERE username='$username' AND password='$password' AND type='1'";
+      $query = "SELECT * FROM user WHERE username='$username' AND password='$password' AND type='1'";
       $results = mysqli_query($db, $query);
       if (mysqli_num_rows($results) == 1) {
         $_SESSION['username'] = $username;
@@ -142,7 +142,7 @@
 
     if (count($errors2) == 0) {
       $password = md5($password);
-      $query = "SELECT * FROM users WHERE username='$username' AND password='$password' AND type='2'";
+      $query = "SELECT * FROM user WHERE username='$username' AND password='$password' AND type='2'";
       $results = mysqli_query($db, $query);
       if (mysqli_num_rows($results) == 1) {
         $_SESSION['username'] = $username;
