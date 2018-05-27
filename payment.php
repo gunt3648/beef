@@ -1,3 +1,4 @@
+<?php include('server.php') ?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -22,7 +23,35 @@
   </head>
 
   <body class="bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light container">
+      <a class="navbar-brand" href="index.php" style="padding: 0 0; font-size: 32px; font-weight: bold;">BEEF</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbarText" aria-controls="navbarText"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
 
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"> <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"></a>
+          </li>
+
+        </ul>
+        <span class="navbar-text">
+
+        </span>
+      </div>
+      <?php  if (isset($_SESSION['username'])) { ?>
+    	  <p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
+    	  <p> <a href="index.php?logout='1'" style="color: red;">Logout</a> </p>
+      <?php } else { ?>
+      <a class="btn btn-outline-primary" href="#">Log in</a>
+      <?php } ?>
+    </nav>
     <div class="container">
       <div class="py-5 text-center">
         <img class="d-block mx-auto mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">

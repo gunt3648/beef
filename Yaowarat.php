@@ -1,3 +1,4 @@
+<?php include('server.php') ?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -7,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico">
 
-    <title>TravelToThailand</title>
+    <title>TravelToBangkok</title>
 
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 
@@ -15,30 +16,41 @@
   </head>
 
   <body>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <a class="navbar-brand" href="#">BEEF</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">login <span class="sr-only">(current)</span></a>
-              </li>
-    
-              
-            </ul>
-            <span class="navbar-text">
-             
-            </span>
-          </div>
-        </nav>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light container">
+      <a class="navbar-brand" href="index.php" style="padding: 0 0; font-size: 32px; font-weight: bold;">BEEF</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbarText" aria-controls="navbarText"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"> <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"></a>
+          </li>
+
+        </ul>
+        <span class="navbar-text">
+
+        </span>
+      </div>
+      <?php  if (isset($_SESSION['username'])) { ?>
+    	  <p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
+    	  <p> <a href="index.php?logout='1'" style="color: red;">Logout</a> </p>
+      <?php } else { ?>
+      <a class="btn btn-outline-primary" href="#">Log in</a>
+      <?php } ?>
+    </nav>
 
     <main role="main" class="container">
       <div class="row">
         <div class="col-md-8 blog-main">
           <h3 class="pb-3 mb-4 font-italic border-bottom">
-            Thailand
+            Bangkok
           </h3>
 
           <div class="blog-post">
@@ -78,10 +90,7 @@
             <h4 class="font-italic">Elsewhere</h4>
             <ol class="list-unstyled">
               <li><a href="Amphawa.html">Amphawa</a></li>
-              <li><a href="Ayutthaya.html">Ayutthaya</a></li>
-              <li><a href="Erawan waterfall.html">Erawan</a></li>
               <li><a href="RodFai.html">Rod Fai Market</a></li>
-              
             </ol>
           </div>
         </aside>
