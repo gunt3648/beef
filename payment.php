@@ -184,7 +184,6 @@
               </div>
             </div>
             <hr class="mb-4">
-            <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
           </form>
         </div>
       </div>
@@ -220,6 +219,7 @@
           });
         }, false);
       })();
+
     </script>
   </body>
 </html>

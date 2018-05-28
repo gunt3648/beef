@@ -58,7 +58,7 @@
     </nav>
     <?php
       $id = $_GET['id']; 
-      $db= mysqli_connect('localhost', 'root', '', 'registration');
+     $db = mysqli_connect('localhost', 'root', 'beef9691', 'registration');
       $query="SELECT * FROM user WHERE id = '$id'";
       $result= mysqli_query($db, $query);
       while ($row= mysqli_fetch_array($result))
@@ -81,7 +81,7 @@
                 $query = "SELECT * FROM user WHERE username = '$username' AND type = '2'";
                 $result= mysqli_query($db, $query);
                 if (mysqli_num_rows($result) == 1) { ?>
-                  <form method="post" action="Profile.php?id=<?php echo $id ?>">
+                  <form method="post" action="profile.php?id=<?php echo $id ?>">
                     <input name="rate" type="number" min="1" max="5">
                     <button type="submit" name="rating" class="btn">submit</button>
                   </from>

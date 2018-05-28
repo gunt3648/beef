@@ -55,7 +55,7 @@
     <div class="container marketing">
       <div class="row">
       <?php
-        $db= mysqli_connect('localhost', 'root', '', 'registration');
+       $db = mysqli_connect('localhost', 'root', 'beef9691', 'registration');
         $query="SELECT * FROM user WHERE type = '1' ORDER BY id DESC" ;
         $result= mysqli_query($db, $query);
         while ($row= mysqli_fetch_array($result))
@@ -69,7 +69,7 @@
         <img class="rounded-circle col-12 mt-5 mb-3" src="http://www.baytekgames.com/wp-content/uploads/2016/12/facebook-default-no-profile-pic1.jpg" alt="Generic placeholder image">
           <h2 class="text-center"><?php echo $first_name." ".$last_name ?></h2>
           <p class="text-center"><?php echo $area ?></p>
-            <p><a class="btn btn-secondary align-items-center d-flex justify-content-center" href="Profile.php?id=<?php echo $id ?>" role="button">View details
+            <p><a class="btn btn-secondary align-items-center d-flex justify-content-center" href="profile.php?id=<?php echo $id ?>" role="button">View details
                 &raquo;</a></p>
           </div>
           <?php } ?>

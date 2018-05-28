@@ -11,18 +11,18 @@
   $errors2 = array();
 
   //connect to database
-  $db = mysqli_connect('unity.hackathon.ilab.sit.kmutt.ac.th', 'root', 'beef9691', 'registration');
+  $db = mysqli_connect('localhost', 'root', 'beef9691', 'registration');
 
   //if regis button is clicked
   if(isset($_POST['register_guide'])) {
-    $username= mysql_real_escape_string($_POST['username']);
-    $email= mysql_real_escape_string($_POST['email']);
-    $password= mysql_real_escape_string($_POST['password']);
-    $password_confirmed= mysql_real_escape_string($_POST['password_confirmed']);
-    $first_name= mysql_real_escape_string($_POST['first_name']);
-    $last_name= mysql_real_escape_string($_POST['last_name']);
-    $tel= mysql_real_escape_string($_POST['tel']);
-    $area= mysql_real_escape_string($_POST['area']);
+    $username= mysqli_real_escape_string($db, $_POST['username']);
+    $email= mysqli_real_escape_string($db, $_POST['email']);
+    $password= mysqli_real_escape_string($db, $_POST['password']);
+    $password_confirmed= mysqli_real_escape_string($db, $_POST['password_confirmed']);
+    $first_name= mysqli_real_escape_string($db, $_POST['first_name']);
+    $last_name= mysqli_real_escape_string($db, $_POST['last_name']);
+    $tel= mysqli_real_escape_string($db, $_POST['tel']);
+    $area= mysqli_real_escape_string($db, $_POST['area']);
 
     if(empty($username)) {
       array_push($errors, "Username is required");
@@ -61,13 +61,13 @@
   }
 
   if(isset($_POST['register_trav'])) {
-    $username= mysql_real_escape_string($_POST['username']);
-    $email= mysql_real_escape_string($_POST['email']);
-    $password= mysql_real_escape_string($_POST['password']);
-    $password_confirmed= mysql_real_escape_string($_POST['password_confirmed']);
-    $first_name= mysql_real_escape_string($_POST['first_name']);
-    $last_name= mysql_real_escape_string($_POST['last_name']);
-    $tel= mysql_real_escape_string($_POST['tel']);
+    $username= mysqli_real_escape_string($db, $_POST['username']);
+    $email= mysqli_real_escape_string($db, $_POST['email']);
+    $password= mysqli_real_escape_string($db, $_POST['password']);
+    $password_confirmed= mysqli_real_escape_string($db, $_POST['password_confirmed']);
+    $first_name= mysqli_real_escape_string($db, $_POST['first_name']);
+    $last_name= mysqli_real_escape_string($db, $_POST['last_name']);
+    $tel= mysqli_real_escape_string($db, $_POST['tel']);
 
     if(empty($username)) {
       array_push($errors2, "Username is required");
@@ -104,8 +104,8 @@
 
   //login
   if(isset($_POST['login_guide'])) {
-    $username = mysql_real_escape_string($_POST['username']);
-    $password = mysql_real_escape_string($_POST['password']);
+    $username = mysqli_real_escape_string($db, $_POST['username']);
+    $password = mysqli_real_escape_string($db, $_POST['password']);
 
     if(empty($username)) {
       array_push($errors, "Username is required");
@@ -130,8 +130,8 @@
 
 //login
   if(isset($_POST['login_traveller'])) {
-    $username = mysql_real_escape_string($_POST['username']);
-    $password = mysql_real_escape_string($_POST['password']);
+    $username = mysqli_real_escape_string($db, $_POST['username']);
+    $password = mysqli_real_escape_string($db, $_POST['password']);
 
     if(empty($username)) {
       array_push($errors2, "Username is required");
