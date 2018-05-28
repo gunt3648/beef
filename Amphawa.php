@@ -42,7 +42,7 @@
     	  <p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
     	  <p> <a href="index.php?logout='1'" style="color: red;">Logout</a> </p>
       <?php } else { ?>
-      <a class="btn btn-outline-primary" href="#">Log in</a>
+      <a class="btn btn-outline-primary" href="login.php">Log in</a>
       <?php } ?>
     </nav>
 

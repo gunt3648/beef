@@ -11,7 +11,7 @@
   $errors2 = array();
 
   //connect to database
-  $db = mysqli_connect('localhost', 'root', '', 'registration');
+  $db = mysqli_connect('unity.hackathon.ilab.sit.kmutt.ac.th', 'root', 'beef9691', 'registration');
 
   //if regis button is clicked
   if(isset($_POST['register_guide'])) {
@@ -160,6 +160,4 @@
     unset($_SESSION['username']);
     header('location: login.php');
   }
-
-  $db->close();
 ?>

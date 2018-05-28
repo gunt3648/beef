@@ -1,3 +1,4 @@
+
 <?php include('server.php') ?>
 <!DOCTYPE html>
 <html>
@@ -20,12 +21,9 @@
       integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
       crossorigin="anonymous"></script>
     <title>BEEF | Home</title>
-
-    <link rel="stylesheet" href="test.css">
   </head>
 
   <body>
-
     <nav class="navbar navbar-expand-lg navbar-light bg-light container">
       <a class="navbar-brand" href="index.php" style="padding: 0 0; font-size: 32px; font-weight: bold;">BEEF</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -52,7 +50,7 @@
     	  <p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
     	  <p> <a href="index.php?logout='1'" style="color: red;">Logout</a> </p>
       <?php } else { ?>
-      <a class="btn btn-outline-primary" href="#">Log in</a>
+      <a class="btn btn-outline-primary" href="login.php">Log in</a>
       <?php } ?>
     </nav>
 
@@ -215,6 +213,5 @@
           </footer>
         </div>
       </div>
-
     </body>
-  </html>>
+  </html>
